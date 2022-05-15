@@ -1,0 +1,2 @@
+googletrans==3.1.0a0 # Use alpha due to: https://github.com/ssut/py-googletrans/issues/280
+# pycountry==22.3.5
