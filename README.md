@@ -19,6 +19,8 @@ Used for my personal site to present greetings in various different languages. C
 
 The language to country mappings may not adequately represent all countries/ languages due to its subjectivity. Mappings based on: https://github.com/lipis/flag-icons/issues/510
 
+Country codes used are in [ISO 3166 Alpha 2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements) format 
+
 Google Translate uses [ISO-639-1 codes](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes), hence the use of the mapping file instead of any library like [PyCountry](https://pypi.org/project/pycountry/) which uses ISO-639-3 values.
 
 ## Todo:
