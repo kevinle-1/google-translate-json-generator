@@ -23,7 +23,7 @@ parser.add_argument('-o',
                     required=False)
 
 if __name__ == '__main__':
-    args = parser.parse_args()
+    args = vars(parser.parse_args())
     translator = Translator()
 
     results = []
@@ -33,7 +33,7 @@ if __name__ == '__main__':
 
         for l in languages:
             try:
-                translation = translator.translate('hello', src='en', dest=l['language'])
+                translation = translator.translate(args['t'], src=args['s'], dest=l['language'])
 
                 l['text'] = translation.text
 
@@ -41,5 +41,5 @@ if __name__ == '__main__':
             except ValueError:
                 print(f"Error: Invalid source or destination language {l['language']}")
 
-    with open('result.json', 'w', encoding='utf-8') as o:
+    with open(args['o'], 'w', encoding='utf-8') as o:
         json.dump(results, o, indent = 4, ensure_ascii=False, sort_keys=True)
